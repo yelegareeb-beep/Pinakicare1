@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Playfair Display', ui-serif, Georgia, serif;
+  
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  
+  /* Skincare Theme variables */
+  --color-primary: var(--app-primary);
+  --color-primary-light: var(--app-primary-light);
+  --color-primary-dark: var(--app-primary-dark);
+  --color-background: var(--app-background);
+  --color-surface: var(--app-surface);
+  --color-border: var(--app-border);
+  --color-text-main: var(--app-text-main);
+  --color-text-muted: var(--app-text-muted);
+  
+  --color-accent-peach: var(--app-accent-peach);
+  --color-accent-peach-dark: var(--app-accent-peach-dark);
+  
+  --color-accent-rose: var(--app-accent-rose);
+  --color-accent-rose-dark: var(--app-accent-rose-dark);
+}
+
+@layer base {
+  :root {
+    --app-primary: #14b8a6; /* Teal 500 */
+    --app-primary-light: #ccfbf1; /* Teal 50 */
+    --app-primary-dark: #0f766e; /* Teal 700 */
+    --app-background: #fdfbf7; /* Warm white/cream */
+    --app-surface: #ffffff;
+    --app-border: #e7e5e4; 
+    --app-text-main: #1c1917; /* Stone 900 */
+    --app-text-muted: #78716c; /* Stone 500 */
+    
+    --app-accent-peach: #ffedd5;
+    --app-accent-peach-dark: #fb923c;
+    
+    --app-accent-rose: #ffe4e6;
+    --app-accent-rose-dark: #fb7185;
+  }
+
+  .dark {
+    color-scheme: dark;
+    --app-primary: #14b8a6; /* Teal 500 */
+    --app-primary-light: #134e4a; /* Teal 900 */
+    --app-primary-dark: #ccfbf1; /* Teal 50 */
+    --app-background: #1c1917; /* Stone 900 */
+    --app-surface: #292524; /* Stone 800 */
+    --app-border: #44403c; /* Stone 700 */
+    --app-text-main: #fdfbf7; /* Warm white */
+    --app-text-muted: #a8a29e; /* Stone 400 */
+    
+    --app-accent-peach: #7c2d12;
+    --app-accent-peach-dark: #fdba74;
+    
+    --app-accent-rose: #881337;
+    --app-accent-rose-dark: #fda4af;
+  }
+
+  body {
+    @apply bg-background text-text-main antialiased selection:bg-primary-light selection:text-primary-dark transition-colors duration-300;
+  }
+}
+
